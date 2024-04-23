@@ -10,19 +10,19 @@
 
 <body>
     <nav class="d-flex justify-content-around flex-row">
-        <a href="http://localhost/transmission-data/index.php">
+        <a href="http://localhost/transmission-data_php/index.php">
             <button type="button" class="btn btn-primary m-3">Index</button>
         </a>
-        <a href="http://localhost/transmission-data/get.php">
+        <a href="http://localhost/transmission-data_php/get.php">
             <button type="button" class="btn btn-primary m-3">Get</button>
         </a>
-        <a href="http://localhost/transmission-data/post.php">
+        <a href="http://localhost/transmission-data_php/post.php">
             <button type="button" class="btn btn-primary m-3">Post</button>
         </a>
-        <a href="http://localhost/transmission-data/session.php">
+        <a href="http://localhost/transmission-data_php/test_session/session.php">
             <button type="button" class="btn btn-primary m-3">Session</button>
         </a>
-        <a href="http://localhost/transmission-data/login.php">
+        <a href="http://localhost/transmission-data_php/test_session/login.php">
             <button type="button" class="btn btn-primary m-3">Login</button>
         </a>
     </nav>

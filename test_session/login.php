@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-
+<?php
+    include("../navbar.php"); 
+?>
 <body>
-<div class="p-3 m-5 d-flex justify-content-center align-items-center flex-column border border-4 border-black bg-secondary text-white">
+<div class="p-3 m-5 d-flex justify-content-center align-items-center flex-column border border-4 border-black bg-dark text-white">
+<h1>Connectez-vous</h1>
 <form method="POST" action="login.php">
     <div class="form-group row">
 <label for="username">Identifiant :</label>
@@ -28,15 +31,15 @@
 </form>
 
 <?php
-$username_valide = "Sarah";
+$username_valide = "Mae";
 $password_valide = "mdp";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'],$_POST['password']))  {
     if($_POST['username'] === $username_valide && $_POST['password'] === $password_valide) {
-        $_SESSION['username'] = $username_valide;
-        $_SESSION['password'] = $password_valide;
-        echo("Bravo $_POST[username] ! Vous êtes connectée.");?>
-        <a href="session.php">Poursuivre ma visite.</a>
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['password'] = $_POST['password'];
+        echo("Welcome " . $_SESSION['username'] . "! Vous êtes connecté(e)");?>
+        <a href="session.php">Poursuivre ma visite par ici.</a>
     <?php
     }
     else {
