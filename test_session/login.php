@@ -45,15 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'],$_POST['pa
     }
     else {
         echo '<div class="alert alert-danger" role="alert">';
-        echo("Vous vous êtes trompés. Veuillez réessayer.");
+        echo("Raté. Veuillez réessayer.");
         echo '</div>';
     }
 }
 ?>
 
 <?php
-
-// Vérifier si l'utilisateur est connecté
+// Vérifier si l'utilisateur.ice est connecté(e)
 if (isset($_SESSION['username'])) {
     // Inclure le fichier logoutForm.php
     include_once('logoutForm.php');

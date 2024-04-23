@@ -12,6 +12,7 @@
 <?php
     include("../navbar.php"); 
 ?>
+<h2>Voici votre identifiant et mot de passe :</h2>
 <?php 
 var_dump($_SESSION['username']);
 var_dump($_SESSION['password']);

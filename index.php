@@ -10,8 +10,8 @@
 
 <body>
     <?php
-    include("./navbar.php") ?>
-
+    include("./navbar.php");
+    ?>
     <h3>Méthode GET</h3>
     <form class=p-5 method="GET" action="get.php">
         <div class="mb-3">
@@ -29,6 +29,9 @@
             <input class="btn btn-outline-success" type="submit">
         </div>
     </form>
+
+    <a href="test_session/cookie.php">Mes cookies</a>
+
 </body>
 
 </html>
