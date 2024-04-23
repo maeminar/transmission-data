@@ -31,6 +31,7 @@
 </form>
 
 <?php
+
 $username_valide = "Mae";
 $password_valide = "mdp";
 
@@ -40,13 +41,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'],$_POST['pa
         $_SESSION['password'] = $_POST['password'];
         echo("Welcome " . $_SESSION['username'] . "! Vous êtes connecté(e)");?>
         <a href="session.php">Poursuivre ma visite par ici.</a>
-    <?php
+<?php
     }
     else {
         echo '<div class="alert alert-danger" role="alert">';
         echo("Vous vous êtes trompés. Veuillez réessayer.");
         echo '</div>';
     }
+}
+?>
+
+<?php
+
+// Vérifier si l'utilisateur est connecté
+if (isset($_SESSION['username'])) {
+    // Inclure le fichier logoutForm.php
+    include_once('logoutForm.php');
 }
 ?>
 
